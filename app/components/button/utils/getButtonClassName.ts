@@ -5,7 +5,7 @@ import {
   sizeButtonStyle,
   Classes,
 } from "../constants";
-import { STRING } from "@/app/constants";
+import { STRING } from "@/app/constants/strings/String.types";
 
 export const getButtonClassName = ({
   variant = BUTTON.PRIMARY,

@@ -1,5 +1,5 @@
 import { TextProps } from "./models/TextProps.interface";
-import { STRING } from "@/app/constants";
+import { STRING } from "@/app/constants/strings/String.types";
 
 export const Text = ({
   children,
