@@ -16,10 +16,10 @@ export function LayoutContador() {
         <>
             <h2>{COUNTER_CONSTANT_VALUES.TITLE}</h2>
             <p>{contador}</p>
-            <button onClick={contador < 5 ? handleIncrementar : null}>
+            <button onClick={contador < COUNTER_CONSTANT_VALUES.MAX_VALUE ? handleIncrementar : null}>
                 {COUNTER_CONSTANT_VALUES.INCREMENT}
             </button>
-            <button onClick={contador > 0 ? handleDecrementar : null}>
+            <button onClick={contador > COUNTER_CONSTANT_VALUES.MIN_VALUE ? handleDecrementar : null}>
                 {COUNTER_CONSTANT_VALUES.DECREMENT}
             </button>
         </>
