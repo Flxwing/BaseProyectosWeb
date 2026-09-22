@@ -1,27 +1,16 @@
 import { useState } from "react"
-import { COUNTER_CONSTANT_VALUES } from "../constants/contador.constants"
+import { Contador1 } from "./contador1/contador1"
+import { Contador2 } from "./Contador2/contador2"
+import { Contador3 } from "./Contador3/contador3"
 
 export function LayoutContador() {
     const [contador, setContador] = useState(0)
 
-    function handleIncrementar() {
-        setContador(prev => prev + COUNTER_CONSTANT_VALUES.INCREMENT_VALUE)
-    }
-
-    function handleDecrementar(){
-        setContador(prev => prev + COUNTER_CONSTANT_VALUES.DECREMENT_VALUE)
-    }
-
     return (
         <>
-            <h2>{COUNTER_CONSTANT_VALUES.TITLE}</h2>
-            <p>{contador}</p>
-            <button onClick={contador < 5 ? handleIncrementar : null}>
-                {COUNTER_CONSTANT_VALUES.INCREMENT}
-            </button>
-            <button onClick={contador > 0 ? handleDecrementar : null}>
-                {COUNTER_CONSTANT_VALUES.DECREMENT}
-            </button>
+            <Contador1 contador={contador} setContador={setContador} />
+            <Contador2 count={contador} setCount={setContador} />
+            <Contador3 contador3={contador} setContador={setContador} />
         </>
     )
 }
